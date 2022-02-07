@@ -1,0 +1,18 @@
+Set Operators
+UNION, UNION ALL, INTERSECT
+
+(select first_name, phone from customers)
+UNION
+(select contact_name, phone from suppliers);
+
+(select first_name, phone from customers)
+UNION ALL
+(select contact_name, phone from suppliers);
+
+(select first_name, phone from customers)
+INTERSECT
+(select contact_name, phone from suppliers);
+
+(SELECT city, country FROM customers WHERE country = 'USA' OR country = 'Brazil')
+UNION
+(SELECT city, country FROM suppliers WHERE country = 'USA' OR country = 'Brazil');
